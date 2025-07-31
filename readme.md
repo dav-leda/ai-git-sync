@@ -9,6 +9,7 @@
 ### Tabla de Contenidos
 - [Características](#características)
 - [Requisitos Previos](#requisitos-previos)
+- [Obtener Clave API de Claude](#obtener-clave-api-de-claude)
 - [Instalación](#instalación-1)
 - [Configuración para Windows](#configuración-para-windows)
 - [Uso](#uso-1)
@@ -36,7 +37,29 @@ Un script inteligente de sincronización de Git que maneja automáticamente camb
 - Shell Bash con utilidades Unix (`curl`, `grep`, `sed`, `tr`, `wc`)
   - **macOS/Linux**: Integrado
   - **Windows**: Requiere WSL, Git Bash, o Cygwin (ver [Configuración para Windows](#configuración-para-windows))
-- *(Opcional)* Clave API de Claude para mensajes de commit con IA
+- *(Opcional)* API key de Claude para mensajes de commit con IA
+
+### Obtener la API key de Claude
+
+Para usar la funcionalidad de mensajes de commit con IA, necesitas una clave API de Claude 3.5 Sonnet de Anthropic:
+
+1. **Crear cuenta en Anthropic**:
+   - Visita [console.anthropic.com](https://console.anthropic.com/)
+   - Crea una cuenta o inicia sesión si ya tienes una
+
+2. **Obtener clave API**:
+   - Ve a la sección "API Keys" en tu dashboard
+   - Haz clic en "Create Key" 
+   - Asigna un nombre descriptivo a tu clave
+   - Copia la clave API generada (guárdala de forma segura, no se mostrará nuevamente)
+
+3. **Configurar facturación**:
+   - Las llamadas a la API de Claude requieren créditos pagados
+   - Ve a "Billing" para agregar un método de pago
+
+**Nota**: El script usa específicamente Claude 3.5 Sonnet (`claude-3-5-sonnet-20241022`) para generar mensajes de commit inteligentes. 
+
+Si no se configura la API key el script también funciona pero con mensajes de commit predeterminados.
 
 ### Instalación
 
@@ -72,9 +95,9 @@ Un script inteligente de sincronización de Git que maneja automáticamente camb
 
    **Opción B: Variable de entorno del shell**
    ```bash
-   export CLAUDE_API_KEY="tu_clave_api_aqui"
+   export CLAUDE_API_KEY="tu_api_key_aqui"
    # O agrégalo a tu ~/.bashrc o ~/.zshrc para que persista
-   echo 'export CLAUDE_API_KEY="tu_clave_api_aqui"' >> ~/.bashrc
+   echo 'export CLAUDE_API_KEY="tu_api_key_aqui"' >> ~/.bashrc
    ```
 
 ### Configuración para Windows
@@ -265,6 +288,7 @@ Luego usar: `git sync`
 ### Table of Contents
 - [Features](#features)
 - [Prerequisites](#prerequisites)
+- [Getting Claude API Key](#getting-claude-api-key)
 - [Installation](#installation)
 - [Windows Setup](#windows-setup)
 - [Usage](#usage)
@@ -293,6 +317,28 @@ An intelligent Git synchronization script that automatically handles local and r
   - **macOS/Linux**: Built-in
   - **Windows**: Requires WSL, Git Bash, or Cygwin (see [Windows Setup](#windows-setup))
 - *(Optional)* Claude API key for AI-powered commit messages
+
+## Getting Claude API Key
+
+To use the AI-powered commit message functionality, you need a Claude 3.5 Sonnet API key from Anthropic:
+
+1. **Create Anthropic Account**:
+   - Visit [console.anthropic.com](https://console.anthropic.com/)
+   - Create an account or sign in if you already have one
+
+2. **Get API Key**:
+   - Go to the "API Keys" section in your dashboard
+   - Click "Create Key"
+   - Give your key a descriptive name
+   - Copy the generated API key (store it securely, it won't be shown again)
+
+3. **Set up Billing**:
+   - Claude API calls require paid credits
+   - Go to "Billing" to add a payment method
+
+**Note**: The script specifically uses Claude 3.5 Sonnet (`claude-3-5-sonnet-20241022`) to generate intelligent commit messages. 
+
+If no API key is configured, the script will fall back to sensible default commit messages.
 
 ## Installation
 
