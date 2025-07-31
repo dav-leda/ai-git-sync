@@ -64,8 +64,17 @@ Un script inteligente de sincronización de Git que maneja automáticamente camb
    ```
 
 2. *(Opcional)* Para mensajes de commit con IA, configura tu clave API de Claude:
+
+   **Opción A: Archivo .env (recomendado para proyectos)**
    ```bash
    echo "CLAUDE_API_KEY=tu_clave_api_aqui" > .env
+   ```
+
+   **Opción B: Variable de entorno del shell**
+   ```bash
+   export CLAUDE_API_KEY="tu_clave_api_aqui"
+   # O agrégalo a tu ~/.bashrc o ~/.zshrc para que persista
+   echo 'export CLAUDE_API_KEY="tu_clave_api_aqui"' >> ~/.bashrc
    ```
 
 ### Configuración para Windows
@@ -311,8 +320,17 @@ An intelligent Git synchronization script that automatically handles local and r
    ```
 
 2. *(Optional)* For AI-powered commit messages, set up your Claude API key:
+
+   **Option A: .env file (recommended for projects)**
    ```bash
    echo "CLAUDE_API_KEY=your_api_key_here" > .env
+   ```
+
+   **Option B: Shell environment variable**
+   ```bash
+   export CLAUDE_API_KEY="your_api_key_here"
+   # Or add it to your ~/.bashrc or ~/.zshrc to persist
+   echo 'export CLAUDE_API_KEY="your_api_key_here"' >> ~/.bashrc
    ```
 
 ## Windows Setup
